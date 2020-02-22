@@ -1,0 +1,16 @@
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.DAL.dll.config
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.DAL.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.DAL.pdb
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.Entity.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.Entity.pdb
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\WorkApp.Entity.dll.config
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\obj\Debug\WorkApp.DAL.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\obj\Debug\WorkApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\obj\Debug\WorkApp.DAL.csproj.CopyComplete
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\obj\Debug\WorkApp.DAL.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.DAL\obj\Debug\WorkApp.DAL.pdb

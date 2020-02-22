@@ -1,0 +1,13 @@
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\WorkApp.Entity.dll.config
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\WorkApp.Entity.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\WorkApp.Entity.pdb
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\obj\Debug\WorkApp.Entity.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\obj\Debug\WorkApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\obj\Debug\WorkApp.Entity.csproj.CopyComplete
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\obj\Debug\WorkApp.Entity.dll
+C:\Users\USER\Desktop\Marianne\WorkingApp\WorkingApp\WorkApp.Entity\obj\Debug\WorkApp.Entity.pdb
