@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Templates/LayoutSign.cshtml";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+                <label>Name</label>
+                <input type="text" id="name" class="form-control" />
+                <label>Login</label>
+                <input type="text" id="idlogin" class="form-control" />
+                <label>Date of Birth</label>
+                <input type="text" id="dateBirth" class="form-control" />
+                <label>Password</label>
+                <input type="password" id="password" class="form-control" />
+                <label>Repeat your password</label>
+                <input type="password" id="passwordTest" class="form-control" />
+                <label>Photo</label>
+                <input type="file" name="Chose" class="form-control-file" />
+                <br />
+
+                <input type="submit" id="btnSignIn" name="sigin" value="Sign Up" tabindex="3" class="btn btn-md btn-primary btn-block" data-disable-with="Signing up…">
+            </div>
+            <div class="card-footer">
+                <label id="text1">Already have an account? </label><a href="/Person/SignIn" class="text-primary" id="create"> Sign In.</a>
+            </div>
+        </div>
+    </div>
+</div>

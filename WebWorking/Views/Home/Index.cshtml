@@ -4,14 +4,56 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>WorkingApp</title>
+    @* Bootstrap CSS*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+    <link href="~/Layout/css/Index.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+
 </head>
 <body>
-    <div> 
-    </div>
+   
+    <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #696969;">
+        <nav class="navbar-brand">WorkingApp</nav>
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/Home/Index">Home</a>
+                    <a class="nav-item nav-link active" href="/Agenda/Calendar">Agenda</a>
+                    <a class="nav-item nav-link active" href="#">Time Control</a>
+                </div>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="/Person/SignIn" class="btn btn-secondary my-2 my-sm-0 border-0" type="submit" style="background-color: #696969">Sign in</a>
+                <a href="/Person/SignUp" class="btn btn-light border-0  my-2 my-sm-0 border-0" style="background-color:white" type="submit">Sign up</a>
+            </form>
+        </div>
+    </nav>
+
+
+
+
+
+    @* Jquery *@
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @* Bootstrap Javascript*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+<form class="form-inline my-2 my-lg-0">
+    
+</form>

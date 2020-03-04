@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Templates/LayoutSign.cshtml";
+}
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-5">
+    </div>
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <form>
+                <div class="card-body">
+                    <label>User Name</label>
+                    <input type="text" id="idlogin" class="form-control" autocomplete="username" />
+
+                    <label>Password</label>
+                    <input type="password" id="pwd" name="pwd" class="form-control" autocomplete="current-password" required/>
+                    <a href="/Person/Password" class="text-primary" id="pwd">Forgot password?</a>
+                    <br />
+
+                    <button id="btnSignIn" name="sigin" value="Sign in" onclick="signin()" tabindex="3" class="btn btn-md btn-success btn-block" data-disable-with="Signing in…">Sign in</button>
+                </div>
+            </form>
+            <div class="card-footer">
+                <a href="/Person/SignUp" class="text-primary" id="create">Create an account.</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@* Jquery *@
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jsProject/JSSignIn.js"></script>
+@* Bootstrap Javascript*@
+<script src="~/Scripts/bootstrap.min.js"></script>

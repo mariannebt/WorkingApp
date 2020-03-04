@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -23,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,12 +94,248 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Layout\css\LayoutAgenda.css" />
+    <Content Include="Layout\css\Index.css" />
+    <Content Include="Layout\css\SignIn.css" />
+    <Content Include="Layout\js\Index.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\background-events.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\daygrid-views.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\default.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\external-dragging-2cals.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\external-dragging-builtin.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\full-height.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\google-calendar.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\json.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\js\theme-chooser.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\list-views.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\locales.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\php\get-events.php" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\php\get-time-zones.php" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\php\utils.php" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\rrule.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\selectable.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\themes.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\time-zones.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\timegrid-views.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\week-numbers.html" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\LICENSE.txt" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\bootstrap\main.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\bootstrap\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\bootstrap\main.min.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\bootstrap\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales-all.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales-all.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\af.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-dz.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-kw.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-ly.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-ma.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-sa.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar-tn.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ar.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\bg.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\bs.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ca.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\cs.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\da.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\de.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\el.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\en-au.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\en-gb.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\en-nz.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\es-us.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\es.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\et.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\eu.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\fa.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\fi.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\fr-ca.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\fr-ch.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\fr.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\gl.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\he.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\hi.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\hr.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\hu.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\id.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\is.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\it.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ja.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ka.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\kk.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ko.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\lb.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\lt.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\lv.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\mk.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ms.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\nb.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\nl.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\nn.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\pl.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\pt-br.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\pt.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ro.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\ru.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sk.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sl.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sq.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sr-cyrl.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sr.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\sv.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\th.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\tr.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\uk.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\vi.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\zh-cn.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\locales\zh-tw.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\main.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\main.min.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\core\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\daygrid\main.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\daygrid\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\daygrid\main.min.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\daygrid\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\google-calendar\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\google-calendar\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\interaction\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\interaction\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\list\main.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\list\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\list\main.min.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\list\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\luxon\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\luxon\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\moment-timezone\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\moment-timezone\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\moment\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\moment\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\rrule\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\rrule\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\timegrid\main.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\timegrid\main.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\timegrid\main.min.css" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\packages\timegrid\main.min.js" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\vendor\rrule.js" />
+    <Content Include="Layout\plugins\projectCalendar\WorkingCalendar.css" />
+    <Content Include="Layout\plugins\projectCalendar\WorkingCalendar.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\CHANGELOG.md" />
+    <Content Include="Layout\plugins\fullcalendar-4.2.0\fullcalendar-4.2.0\demos\json\events.json" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jsProject\JSSignIn.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AgendaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -107,6 +345,24 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Templates\LayoutSign.cshtml" />
+    <Content Include="Views\Person\SignIn.cshtml" />
+    <Content Include="Views\Person\SignUp.cshtml" />
+    <Content Include="Views\Person\Password.cshtml" />
+    <Content Include="Views\Templates\LayoutAgenda.cshtml" />
+    <Content Include="Views\Agenda\Calendar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,12 +373,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
